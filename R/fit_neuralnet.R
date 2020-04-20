@@ -352,10 +352,13 @@ backprop <-
             learningrate.bp, exclude) 
   {
     weights <- unlist(weights)
+    print(weights)
+    print(exclude)
     if (!is.null(exclude)) 
       weights[-exclude] <- weights[-exclude] - gradients * 
         learningrate.bp
     else weights <- weights - gradients * learningrate.bp
+    print(weights)
     list(gradients.old = gradients, weights = relist(weights, 
                                                      nrow.weights, ncol.weights), learningrate = learningrate.bp)
   }
