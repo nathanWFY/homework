@@ -55,5 +55,5 @@ convert.error.function <- function(fun) {
   } else {
     stop("Unknown function.", call. = FALSE)
   }
-  list(fct = fct, deriv.fct = deriv.fct)
+  list(fct = fct, deriv.fct = deriv.fct) 
 }
