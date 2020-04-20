@@ -64,8 +64,8 @@ calculate.neuralnet <-
         message("\ttime: ", round(time, 2), " ", attr(time, "units"))
       }
     }
-    if (reached.threshold > threshold) 
-      return(result = list(output.vector = NULL, weights = NULL))
+   % if (reached.threshold > threshold) 
+   %   return(result = list(output.vector = NULL, weights = NULL))
     output.vector <- c(error = error, reached.threshold = reached.threshold, 
                        steps = step)
     if (!is.null(aic)) {
