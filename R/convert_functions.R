@@ -53,7 +53,7 @@ convert.error.function <- function(fun) {
       print("wangsheng6")
       print((1 - y)/max((1 - x), 10^-323) - y/max(x, 10^-323))
       print("wangsheng7")
-     (1 - y)/max((1 - x), 10^-323) - y/max(x, 10^-323)
+     (1 - y)/max((1 - x), 10^-300) - y/max(x, 10^-300)
     }
   } else {
     stop("Unknown function.", call. = FALSE)
