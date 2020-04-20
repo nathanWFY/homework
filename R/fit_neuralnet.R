@@ -64,8 +64,7 @@ calculate.neuralnet <-
         message("\ttime: ", round(time, 2), " ", attr(time, "units"))
       }
     }
-   % if (reached.threshold > threshold) 
-   %   return(result = list(output.vector = NULL, weights = NULL))
+
     output.vector <- c(error = error, reached.threshold = reached.threshold, 
                        steps = step)
     if (!is.null(aic)) {
@@ -89,6 +88,8 @@ calculate.neuralnet <-
     return(list(generalized.weights = generalized.weights, weights = weights, 
                 startweights = startweights, net.result = result$net.result, 
                 output.vector = output.vector))
+        if (reached.threshold > threshold) 
+     return(result = list(output.vector = NULL, weights = NULL))
   }
 generate.startweights <-
   function (model.list, hidden, startweights, rep, exclude, constant.weights) 
