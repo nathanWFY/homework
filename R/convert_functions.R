@@ -50,6 +50,8 @@ convert.error.function <- function(fun) {
       print(x)
       print("wangsheng4")
       print(y)
+      print("wangsheng6")
+      print((1 - y)/max((1 - x), 10^-323) - y/max(x, 10^-323))
      (1 - y)/max((1 - x), 10^-323) - y/max(x, 10^-323)
     }
   } else {
