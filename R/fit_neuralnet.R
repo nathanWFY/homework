@@ -219,9 +219,12 @@ rprop <-
     result <- compute.net(weights, length.weights, covariate = covariate, 
                           act.fct = act.fct, act.deriv.fct = act.deriv.fct, output.act.fct = output.act.fct, 
                           output.act.deriv.fct = output.act.deriv.fct, special, output.special)
+    print("wangsheng")
     print(result$net.result)
     print(response)
     err.deriv <- err.deriv.fct(result$net.result, response)
+    print("wangsheng")
+    print(err.deriv)
     gradients <- calculate.gradients(weights = weights, length.weights = length.weights, 
                                      neurons = result$neurons, neuron.deriv = result$neuron.deriv, 
                                      err.deriv = err.deriv, exclude = exclude, linear.output = linear.output)
