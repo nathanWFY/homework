@@ -225,9 +225,6 @@ rprop <-
                                      neurons = result$neurons, neuron.deriv = result$neuron.deriv, 
                                      err.deriv = err.deriv, exclude = exclude, linear.output = linear.output)
     reached.threshold <- max(abs(gradients))
-    print("wangsheng5")
-    print(err.deriv)
-    print(gradients)
     min.reached.threshold <- reached.threshold
     while (step < stepmax && reached.threshold > threshold) {
       if (!is.character(lifesign) && step%%lifesign.step == 
