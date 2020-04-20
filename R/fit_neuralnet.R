@@ -257,6 +257,9 @@ rprop <-
                                        neurons = result$neurons, neuron.deriv = result$neuron.deriv, 
                                        err.deriv = err.deriv, exclude = exclude, linear.output = linear.output)
       reached.threshold <- max(abs(gradients))
+      print("wangsheng")
+      print(reached.threshold)
+      print(min.reached.threshold)
       if (reached.threshold < min.reached.threshold) {
         min.reached.threshold <- reached.threshold
       }
