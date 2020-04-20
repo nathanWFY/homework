@@ -10,6 +10,7 @@ calculate.neuralnet <-
     result <- generate.startweights(model.list, hidden, startweights, 
                                     rep, exclude, constant.weights)
     weights <- result$weights
+    
     exclude <- result$exclude
     nrow.weights <- sapply(weights, nrow)
     ncol.weights <- sapply(weights, ncol)
