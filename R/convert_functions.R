@@ -46,8 +46,13 @@ convert.error.function <- function(fun) {
     }
     attr(fct, "type") <- "ce"
     deriv.fct <- function(x, y) {
+      print("wangsheng8")
+      print(x)
+      print("wangsheng9")
+      print(y)
       print("wangsheng6")
       print((1 - y)/max((1 - x), 10^-323) - y/max(x, 10^-323))
+      print("wangsheng7")
      (1 - y)/max((1 - x), 10^-323) - y/max(x, 10^-323)
     }
   } else {
